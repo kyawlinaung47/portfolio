@@ -151,8 +151,8 @@ export async function handleSelected(formData :FormData) {
 export async function handleEditItem(formData :FormData) {
         try{
                 const {itemName,itemQuantity,price} = items.parse({
-                         itemName : formData.get("itemName") as string,
-                         itemQuantity : formData.get("itemQuantity"),
+                         itemName : formData.get("name") as string,
+                         itemQuantity : formData.get("quantity"),
                          price : formData.get("price"),
         })
         const id =formData.get('id');

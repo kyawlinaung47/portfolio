@@ -11,6 +11,7 @@ interface Props{
 
 export default  function EditItems({ trueEditItem }: Props) {
 
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>",trueEditItem)
     const submitHandleEditItem = async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
             const form = e.currentTarget
