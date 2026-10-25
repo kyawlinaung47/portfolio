@@ -22,6 +22,7 @@ model Items {
   orderItem OrderItem[]
   purchaseVendorItems PurchaseVendorItems[]
   saleVendorItems saleVendorItems[]
+  
 }
 
 model Customer {
