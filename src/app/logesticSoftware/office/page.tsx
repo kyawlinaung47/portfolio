@@ -10,6 +10,7 @@ export default async function Office(){
 
      const items =  await prisma.items.findMany();
      const suppliers = await prisma.supplier.findMany();
+     const trueEditItem = await prisma.items.findFirst({where:{selected:true}});
 
     return (
         <Box sx={{display: 'flex',flexWrap: 'wrap',mt: "100px",flexDirection: "row",width: "100%",alignItems: 'center',justifyContent: 'center'}}>
@@ -24,7 +25,7 @@ export default async function Office(){
                     <Typography sx={{ml: 5,mb:2}}>Edit Itmes</Typography>
                     <HandleSelected items={items}></HandleSelected>
                   </Box>
-                  <EditItems></EditItems>
+                  <EditItems trueEditItem={trueEditItem}></EditItems>
               </Box>
               <Box sx={{display: 'flex',height: '550PX',minWidth:"350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
                               <VendorAddShow ></VendorAddShow>

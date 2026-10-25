@@ -149,7 +149,8 @@ export async function handleSelected(formData :FormData) {
 }
 
 export async function handleEditItem(formData :FormData) {
-        const {itemName,itemQuantity,price} = items.parse({
+        try{
+                const {itemName,itemQuantity,price} = items.parse({
                          itemName : formData.get("itemName") as string,
                          itemQuantity : formData.get("itemQuantity"),
                          price : formData.get("price"),
@@ -157,6 +158,13 @@ export async function handleEditItem(formData :FormData) {
         const id =formData.get('id');
         await prisma.items.update({where:{id:Number(id)},data: {name: itemName,quantity: Number(itemQuantity),price: Number(price)}})
         revalidatePath("/logesticSoftware/office")
+        }catch (error) {
+                if(error instanceof ZodError){
+                        const errorMessages = error.issues.map((item) => item.message).join(",");
+                        return { error: errorMessages };
+                }
+                return { error: "An unexpected error occurred" };
+        }        
 }
 
 export async function handleRemoveItem(formData :FormData) {
