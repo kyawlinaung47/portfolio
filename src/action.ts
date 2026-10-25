@@ -156,7 +156,7 @@ export async function handleEditItem(formData :FormData) {
         })
         const id =formData.get('id');
         await prisma.items.update({where:{id:Number(id)},data: {name: itemName,quantity: Number(itemQuantity),price: Number(price)}})
-        revalidatePath("/")
+        revalidatePath("//logesticSoftware/office")
 }
 
 export async function handleRemoveItem(formData :FormData) {
