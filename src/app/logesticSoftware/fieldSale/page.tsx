@@ -5,6 +5,8 @@ import VendorFieldSaleShow from "@/component/vendorFieldSaleShow";
 import { prisma } from "@/libs/prisma";
 import { Box } from "@mui/material";
 
+export const dynamic = 'force-dynamic'
+
 export default async function FieldSale() {
     
     const customers = await prisma.customer.findMany();

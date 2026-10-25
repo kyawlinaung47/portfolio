@@ -6,6 +6,8 @@ import VendorAddShow from "@/component/vendorAddShow";
 import { prisma } from "@/libs/prisma";
 import { Box, Typography } from "@mui/material";
 
+export const dynamic = 'force-dynamic'
+
 export default async function Office(){
 
      const items =  await prisma.items.findMany();
