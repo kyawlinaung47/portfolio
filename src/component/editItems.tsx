@@ -1,6 +1,7 @@
+"use client"
+
 import { handleEditItem } from "@/action";
-import { prisma } from "@/libs/prisma";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { Items } from "@prisma/client";
 import toast from "react-hot-toast";
 
