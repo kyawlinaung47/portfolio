@@ -20,8 +20,8 @@ export default async function Office(){
                     <CreateNew></CreateNew>
                 </Box>
               </Box>
-              <Box sx={{display: 'flex',height: '550PX',maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
-                  <Box sx={{width:"400px",mt: 3}}>
+              <Box sx={{display: 'flex',height: '550PX',minWidth:"350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
+                  <Box sx={{maxWidth:"400px",mt: 3}}>
                     <Typography sx={{ml: 5,mb:2}}>Edit Itmes</Typography>
                     <HandleSelected items={items}></HandleSelected>
                   </Box>
