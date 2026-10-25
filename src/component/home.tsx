@@ -14,7 +14,7 @@ export default async  function HomeComponent() {
   return (
     <>
     <HomeTopBar />
-    <Box sx={{top: "75px",width: "100%", scrollBehavior: 'smooth',  bgcolor: '#49A4BB', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+    <Box sx={{width: "100%", scrollBehavior: 'smooth',  bgcolor: '#49A4BB', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         
           <Box sx={{display: 'flex',flexWrap: 'wrap',flexDirection: "row",alignItems: 'center',justifyContent: "center",mt: 10,scrollMarginTop: '75px'}} id="targetOne-div">
             <Box sx={{display: 'flex',flexDirection: 'column',flexWrap: 'wrap',color: 'white',ml: 5,mr: 5,padding: 2,borderRadius: '10px',border: "ThreeDShadow", justifyContent: 'center'}}>

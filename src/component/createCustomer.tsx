@@ -21,10 +21,10 @@ export default  function CreateNewCustomer() {
     
     return (
             <Box sx={{display: "flex",flexDirection: "column",m:2}} component="form" onSubmit={handleCreateCustomer}>
-                <Typography sx={{ml: 5,mt:1}}>Create Customer</Typography>
+                <Typography sx={{ml: 5,mt:1,fontWeight: "bold",fontSize: "24px"}}>Create Customer</Typography>
                 <TextField sx={{width: 250,mb:1,mt: 3}} name="customerName" label="Name"></TextField>
-                <TextField sx={{width:250,mb:1}} type="number" name="customerCredit" label="Credit"></TextField>
-                <Button type="submit" variant="contained">Create</Button>
+                <TextField sx={{width:250,mt:2,mb:1}} type="number" name="customerCredit" label="Credit"></TextField>
+                <Button sx={{mt: 2}} type="submit" variant="contained">Create</Button>
             </Box>
     )
      

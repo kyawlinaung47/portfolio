@@ -24,7 +24,7 @@ const response = await handleComment(FormData);
     
 
     return(
-        <Box sx={{position:"absolute",bottom: 0}} component="form" action={handleCommentClient}>
+        <Box sx={{bottom: 0}} component="form" action={handleCommentClient}>
                 <input hidden defaultValue={id} name="id"/>
                 <TextField sx={{margin: 1}} name="name" label="name" />
                 <TextField sx={{margin: 1,width: 300}} name="comment" label="Comment" variant="outlined" fullWidth multiline rows={1} />

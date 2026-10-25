@@ -18,7 +18,7 @@ export default async function VendorFieldSaleShow() {
 
     return(
         <Box sx={{height: "100%"}}>
-            <Typography sx={{mt: 3,ml: 5}}>Vendors</Typography>
+            <Typography sx={{mt: 3,ml: 5,fontWeight: "bold",fontSize: "24px"}}>Vendors</Typography>
             <VendorFieldSaleShowList saleVendors={saleVendors} customers={customers}></VendorFieldSaleShowList>
             <VendorFieldSaleShowItmes></VendorFieldSaleShowItmes>
         </Box>

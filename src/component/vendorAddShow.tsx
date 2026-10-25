@@ -18,7 +18,7 @@ export default async function VendorAddShow() {
 
     return(
         <Box sx={{height: "100%"}}>
-            <Typography sx={{mt: 3,ml: 5}}>Vendors</Typography>
+            <Typography sx={{mt: 3,ml: 5,fontWeight: "bold",fontSize: "24px"}}>Vendors</Typography>
             <VendorAddShowList purchaseVendors={purchaseVendors} suppliers={suppliers}></VendorAddShowList>
             <VendorAddShowItmes></VendorAddShowItmes>
         </Box>

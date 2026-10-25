@@ -6,7 +6,7 @@ export default async function ShowQuantityAndPrice  () {
         const items = await prisma.items.findMany();
     return (
         <Box>
-            <Typography sx={{mt: 3,ml: 5}}>Items Quantitys and Prices</Typography>
+            <Typography sx={{mt: 3,ml: 5,fontWeight: "bold",fontSize: "24px"}}>Items Quantitys and Prices</Typography>
             <Box sx={{display: "flex",flexDirection: "row",alignItems: "center",justifyContent: "space-around"}}>
                 <h3>Item Name</h3>
                 <h3>Item Quantity</h3>

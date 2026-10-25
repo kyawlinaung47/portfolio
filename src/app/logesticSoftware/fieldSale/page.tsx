@@ -11,7 +11,7 @@ export default async function FieldSale() {
     const items =  await prisma.items.findMany();
 
     return (
-        <Box sx={{display: 'flex',flexWrap: 'wrap',mt: "100px",flexDirection: "row",width: "100%",alignItems: 'center',justifyContent: 'center'}}>
+        <Box sx={{display: 'flex',flexWrap: 'wrap',flexDirection: "row",width: "100%",alignItems: 'center',justifyContent: 'center'}}>
                 <Box sx={{display: 'flex',height: '550PX',minWidth:"350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
                 <ShowQuantityAndPrice/>
                </Box>

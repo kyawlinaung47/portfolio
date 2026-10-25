@@ -79,7 +79,7 @@ export default function VendorAdd({items,suppliers}:Prop){
     
     return(
       <Box sx={{maxHeight: "100%"}} >
-        <Typography sx={{mt: 3,ml: 5}}>Add Vendor</Typography>
+        <Typography sx={{mt: 3,ml: 5,fontWeight: "bold",fontSize: "24px"}}>Add Vendor</Typography>
         <Toaster position="top-center"></Toaster>
         <Box component="form" onSubmit={handleCloseTagForVenderAdd} sx={{display: isHidden? "none": "flex",flexDirection: "column",alignItems: "center",justifyContent: "space-around"}}>
                   <Box >

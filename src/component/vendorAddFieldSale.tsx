@@ -79,7 +79,7 @@ export default function VendorAddFieldSale({items,customers}:Prop){
     
     return(
       <Box sx={{maxHeight: "100%"}} >
-        <Typography sx={{mt: 3,ml: 5}}>FieldSale Vendor Add</Typography>
+        <Typography sx={{mt: 3,ml: 5,fontWeight: "bold",fontSize: "24px"}}>FieldSale Vendor Add</Typography>
         <Toaster position="top-center"></Toaster>
         <Box component="form" onSubmit={handleCloseTagForVenderSale} sx={{display: isHidden? "none": "flex",flexDirection: "column",justifyContent: "center",alignItems: "center"}}>
           <Box sx={{textTransform: "uppercase"}} >

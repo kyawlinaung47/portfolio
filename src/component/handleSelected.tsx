@@ -37,7 +37,7 @@ export default function HandleSelected({items}:Prop) {
       isOptionEqualToValue={(option, value) => option.id === value.id}
       renderInput={(params) => <TextField {...params} label="Select a Item" />}
     />
-    <Box  component="form" action={handleSelected}>
+    <Box sx={{ml: 2}}  component="form" action={handleSelected}>
       <input hidden name="selectedId" defaultValue={value?.id}></input>
       <Button variant='contained' type='submit'>ENTER</Button>
     </Box>

@@ -19,7 +19,7 @@ export default async function CommentComponent() {
         const id = comments.length + 1;
     if (!comments) null;
     return (
-        <Box sx={{position: "relative",height: "100%"}}>
+        <Box sx={{}}>
             <Toaster position="top-center"/>
             <Box sx={{mt: 2,overflow: "auto",height: "320px"}}>
                 {comments.map((item: commentItem )=>{
