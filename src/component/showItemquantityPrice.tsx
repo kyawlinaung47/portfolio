@@ -1,8 +1,10 @@
 import { prisma } from "@/libs/prisma";
 import { Box, Typography } from "@mui/material";
 
-export default async function ShowQuantityAndPrice  () {
+export const dynamic = 'force-dynamic'
 
+export default async function ShowQuantityAndPrice  () {
+        
         const items = await prisma.items.findMany();
     return (
         <Box>
