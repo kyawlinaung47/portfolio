@@ -8,8 +8,8 @@ import { Box, Typography } from "@mui/material";
 
 export default async function Office(){
 
-    const items =  await prisma.items.findMany();
-    const suppliers = await prisma.supplier.findMany();
+     const items =  await prisma.items.findMany();
+     const suppliers = await prisma.supplier.findMany();
 
     return (
         <Box sx={{display: 'flex',flexWrap: 'wrap',mt: "100px",flexDirection: "row",width: "100%",alignItems: 'center',justifyContent: 'center'}}>
