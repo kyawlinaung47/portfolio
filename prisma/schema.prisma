@@ -1,0 +1,96 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+
+}
+
+model Items {
+  id Int @id @default(autoincrement())
+  name String
+  quantity Int
+  price Int
+  addQuantity Int? @default(0)
+  selected Boolean @default(false)
+  orderItem OrderItem[]
+  purchaseVendorItems PurchaseVendorItems[]
+  saleVendorItems saleVendorItems[]
+}
+
+model Customer {
+  id Int @id @default(autoincrement())
+  name String
+  credit Int @default(0)
+  orders Orders[]
+  saleVendors saleVendor[]
+}
+
+model supplier{
+  id Int @id @default(autoincrement())
+  name String
+  contact Int @default(0)
+  purchaseVendors PurchaseVendor[]
+}
+
+
+
+model Orders{
+  id Int @id @default(autoincrement())
+  customerId Int 
+  customer Customer @relation(fields: [customerId],references: [id])
+  createdAt DateTime @default(now())
+  orderItem OrderItem[]
+}
+
+model OrderItem{
+  id Int @id @default(autoincrement())
+  orderId Int
+  order Orders @relation(fields: [orderId],references: [id])
+  itemId Int
+  item Items @relation(fields: [itemId],references: [id])
+  
+}
+
+model PurchaseVendor{
+  id Int @id @default(autoincrement())
+  supplierId Int
+  purchaseTime DateTime @default(now())
+  selected Boolean @default(false)
+  supplier supplier @relation(fields: [supplierId],references: [id])
+  purchaseVendorItems PurchaseVendorItems[]
+}
+
+
+model PurchaseVendorItems{
+  id Int @id @default(autoincrement())
+  purchaseVendorId Int
+  purchaseVendor PurchaseVendor @relation(fields: [purchaseVendorId],references: [id])
+  itemQuantity Int @default(0)
+  itemId Int 
+  items Items @relation(fields: [itemId],references: [id])
+}
+
+model saleVendor{
+  id Int @id @default(autoincrement())
+  customerId Int
+  saleTime DateTime @default(now())
+  selected Boolean @default(false)
+  customer Customer @relation(fields: [customerId],references: [id])
+  saleVendorItems saleVendorItems[]
+}
+
+model saleVendorItems{
+  id Int @id @default(autoincrement())
+  saleVendorId Int
+  saleVendor saleVendor @relation(fields: [saleVendorId],references: [id])
+  itemQuantity Int @default(0)
+  itemId Int 
+  items Items @relation(fields: [itemId],references: [id])
+}
