@@ -152,8 +152,8 @@ export async function handleEditItem(formData :FormData) {
         try{
                 const {itemName,itemQuantity,price} = items.parse({
                          itemName : formData.get("name") as string,
-                         itemQuantity : formData.get("quantity"),
-                         price : formData.get("price"),
+                         itemQuantity : Number(formData.get("quantity")),
+                         price : Number(formData.get("price")),
         })
         const id =formData.get('id');
         await prisma.items.update({where:{id:Number(id)},data: {name: itemName,quantity: Number(itemQuantity),price: Number(price)}})
