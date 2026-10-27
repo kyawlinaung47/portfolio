@@ -4,13 +4,10 @@ import { handleComment } from "@/action";
 import { Box, TextField, Button } from "@mui/material";
 import toast from "react-hot-toast";
 
-interface Props{
-    id: number;
-
-}
 
 
-export default  function CommentForm({id}:Props){
+
+export default  function CommentForm(){
 const handleCommentClient = async(FormData: FormData)=>{
 const response = await handleComment(FormData);
       if (response?.error) {
@@ -25,9 +22,8 @@ const response = await handleComment(FormData);
 
     return(
         <Box sx={{bottom: 0}} component="form" action={handleCommentClient}>
-                <input hidden defaultValue={id} name="id"/>
-                <TextField sx={{margin: 1}} name="name" label="name" />
-                <TextField sx={{margin: 1,width: 300}} name="comment" label="Comment" variant="outlined" fullWidth multiline rows={1} />
+                <TextField sx={{margin: 1}} name="email" type="email" label="Email" />
+                <TextField sx={{margin: 1,width: 300}} name="comment" type="text" label="Comment" variant="outlined" fullWidth multiline rows={1} />
                 <Button sx={{margin:1}} type="submit" variant="contained" color="primary">Submit</Button>
             </Box>
     )

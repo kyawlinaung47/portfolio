@@ -28,7 +28,7 @@ model Items {
 model Customer {
   id Int @id @default(autoincrement())
   name String
-  credit Int @default(0)
+  credit Int? @default(0)
   orders Orders[]
   saleVendors saleVendor[]
 }
@@ -36,7 +36,7 @@ model Customer {
 model supplier{
   id Int @id @default(autoincrement())
   name String
-  contact Int @default(0)
+  contact Int? @default(0)
   purchaseVendors PurchaseVendor[]
 }
 
@@ -94,4 +94,11 @@ model saleVendorItems{
   itemQuantity Int @default(0)
   itemId Int 
   items Items @relation(fields: [itemId],references: [id])
+}
+
+model Comments{
+  id Int @id @default(autoincrement())
+  email String
+  comment String
+  createdAt DateTime @default(now())
 }

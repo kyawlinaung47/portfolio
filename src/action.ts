@@ -8,8 +8,7 @@ import z, { number, ZodError } from "zod";
 
 const commentData = z.object({
         comment: z.string().min(1, "Comment is required"),
-        name: z.string().min(1, "Name is required"),
-        id: number().int().positive("Id must be a positive integer"),
+        email: z.string().email("Invalid email address").min(1, "Email is required"),
 
 })
 
@@ -27,17 +26,20 @@ const customers = z.object({
 
 export async function handleComment(formData: FormData) {
         try{
-        const {comment,name,id } = commentData.parse({
+        const {comment,email} = commentData.parse({
                 comment: formData.get("comment"),
-                name: formData.get("name"),
-                id: Number(formData.get("id"))
+                email: formData.get("email"),
         })
         
-        const commentItem = {comment,name,id}
-        const commentsFile= fs.readFileSync("comments.json", "utf-8");
-        const comments = JSON.parse(commentsFile);
-        comments.push(commentItem);
-        fs.writeFileSync("comments.json", JSON.stringify(comments));
+
+        await prisma.comments.create({data:{email: email,comment: comment}})
+
+        // file path for comments.json
+        // const commentItem = {comment,email,id}
+        // const commentsFile= fs.readFileSync("comments.json", "utf-8");
+        // const comments = JSON.parse(commentsFile);
+        // comments.push(commentItem);
+        // fs.writeFileSync("comments.json", JSON.stringify(comments));
         revalidatePath("/")
         }catch (error) {
                 if(error instanceof ZodError){
