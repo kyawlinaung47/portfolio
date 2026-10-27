@@ -112,7 +112,7 @@ export default async  function HomeComponent() {
 
                       <Box sx={{display: "flex",flexDirection: "row",alignItems: "center",justifyContent: "space-around",m: 2}}>
                         <h3 style={{margin:  "0px 20px 0px 0px",}}><a href="/logesticSoftware/office">View Project</a></h3>
-                        <h3 style={{margin: 0}} ><a href="">View Code</a></h3>
+                        <h3 style={{margin: 0}} ><a href="https://github.com/kyawlinaung47/portfolio">View Code</a></h3>
                       </Box>
                     
                </Box>
