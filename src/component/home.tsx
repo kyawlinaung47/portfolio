@@ -19,19 +19,18 @@ export default async  function HomeComponent() {
           <Box sx={{display: 'flex',flexWrap: 'wrap',flexDirection: "row",alignItems: 'center',justifyContent: "center",mt: 10,scrollMarginTop: '75px'}} id="targetOne-div">
             <Box sx={{display: 'flex',flexDirection: 'column',flexWrap: 'wrap',color: 'white',ml: 5,mr: 5,padding: 2,borderRadius: '10px',border: "ThreeDShadow", justifyContent: 'center'}}>
                 <Box sx={{ textAlign: 'center'}}>
-                  <h1>Hello.</h1>
-                  <h2>I'm Kyaw Lin Aung.</h2>
-                  <h3 style={{marginLeft: 10}}>I'm a Javascript developer.</h3>
+                  <h1>Hello, I'm Kyaw Lin Aung.</h1>
+                  <h2>I'm a Javascript developer.</h2>
                 </Box>
                 <Box sx={{ width: '220px', height: '350px',borderRadius: '10%', overflow: 'hidden', margin: '0 auto', mt: 2 }}>
                 <img style={{ width: '100%', height: '100%',borderRadius: '10'}} src="/profile.jpeg" alt="Profile Image" />
                </Box>
             </Box>
-            <Box sx={{display: 'flex',height: '550PX',maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center',justifyContent: "space-around",color: 'white',margin: 5,padding: 2,borderRadius: '10px',border: "ThreeDShadow"}}>
+            <Box sx={{display: 'flex',height: {xs: 'auto', sm: '600px'},maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center',justifyContent: "start",color: 'white',margin: 5,padding: 2,borderRadius: '10px',border: "ThreeDShadow"}}>
                 
-                <Typography sx={{mt: 2,lineHeight: 2}}>I'm a passionate JavaScript developer with experience in building modern web applications.</Typography>
-                <Typography sx={{mt: 1,lineHeight: 2}}>Skilled in React, Node.js, Express.js and Next.js JavaScript frameworks, I enjoy creating user-friendly interfaces and efficient backend solutions.</Typography>
-                <Typography sx={{mt: 1,lineHeight: 2}}>My goal is to continuously learn and contribute to innovative projects that make a positive impact.</Typography>
+                <Typography sx={{mt: 6,lineHeight: 3.5}}>-        I'm a passionate JavaScript developer with 4+ years of learning experience in building modern web applications.</Typography>
+                <Typography sx={{mt: 2,lineHeight: 3.5}}>-        Skilled in React, Node.js, Express.js and Next.js JavaScript frameworks.</Typography>
+                <Typography sx={{mt: 2,lineHeight: 3.5}}>-        My goal is to continuously learn and contribute to innovative projects that make a positive impact.</Typography>
               </Box>
           </Box>
           <Box sx={{display: 'flex',flexWrap: 'wrap',mt: 5,flexDirection: "row",alignItems: 'center',justifyContent: 'center'}}>
@@ -98,21 +97,21 @@ export default async  function HomeComponent() {
                       </Box>
                     </Box>
               </Box>
-              <Box ><h1 style={{marginTop: 100,color: "white",scrollMarginTop: '90px'}} id="targetThree-div">Projects</h1></Box>
+              <Box ><h1 style={{marginTop: 85,color: "white",scrollMarginTop: '90px'}} id="targetThree-div">Projects</h1></Box>
                   
                   
-              <Box sx={{display: 'flex',minWidth:"350px",maxWidth: "350px",height: '320PX',flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
+              <Box sx={{display: 'flex',minWidth:"350px",maxWidth: "350px",height: '350PX',flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
                       <Box>
                         <h2 style={{marginTop: 10}}>Logestic Mini Web Software</h2>
                       </Box>
                       
                       <Box>
-                          <h4 style={{marginTop: 3,lineHeight: 2}}>Logestic Web Software for selling item,checking vendors,checking stocks,editing item price and stock,buying items and filling stock and checking purchase vendor by using HTML,CSS,React and Next.js. </h4>
+                          <h4 style={{marginTop: 3,lineHeight: 2}}>A mini Logistics Web Application built with HTML, CSS, React, and Next.js. This platform enables users to sell items, manage vendors, check real-time stock levels, modify item prices, purchase new inventory to replenish stock, and track supplier data. </h4>
                       </Box>
 
                       <Box sx={{display: "flex",flexDirection: "row",alignItems: "center",justifyContent: "space-around",m: 2}}>
-                        <h3 style={{margin:  "0px 20px 0px 0px",}}><a href="/logesticSoftware/office">View Project</a></h3>
-                        <h3 style={{margin: 0}} ><a href="https://github.com/kyawlinaung47/portfolio">View Code</a></h3>
+                        <h3 style={{margin:  "0px 20px 0px 0px",}}><a style={{color: 'black', textDecoration: 'underline'}} href="/logesticSoftware/office">View Project</a></h3>
+                        <h3 style={{margin: 0}} ><a style={{color: 'black', textDecoration: 'underline'}} href="https://github.com/kyawlinaung47/portfolio">View Code</a></h3>
                       </Box>
                     
                </Box>
@@ -120,9 +119,9 @@ export default async  function HomeComponent() {
               <Box sx={{display: 'flex',height: '550PX',minWidth:"350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", justifyContent: 'space-around', mt: 2}}>
                 <CommentComponent/>
               </Box>
-              <Box>fdhjkhfkd</Box>
+              <Box sx={{fontSize: "20px",mt: 5}}>You can contact me at any time!</Box>
       <div id="targetTwo-div" style={{scrollMarginTop: '75px'}}  >
-              <h2>You have arrived!</h2>
+              <h2 style={{marginBottom: 50}}>Kyawlynnaung1995@gmail.com</h2>
       </div>
 
       

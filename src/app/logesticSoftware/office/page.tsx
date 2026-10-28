@@ -15,7 +15,7 @@ export default async function Office(){
      const trueEditItem = await prisma.items.findFirst({where:{selected:true}});
 
     return (
-        <Box sx={{display: 'flex',flexWrap: 'wrap',flexDirection: "row",width: "100%",alignItems: 'center',justifyContent: 'center'}}>
+        <Box sx={{display: 'flex',flexWrap: 'wrap',flexDirection: "row",width: "100%",alignItems: 'center',justifyContent: 'center',mt: 3}}>
             <Box sx={{display: 'flex',height: '550PX',maxWidth: "400px",minWidth:"350px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow"}}>
                 <Box>
                     <Typography sx={{mt: 3,ml: 5,fontWeight: "bold",fontSize: "24px"}}>Vendors</Typography>

@@ -147,7 +147,7 @@ export default function VendorAddFieldSale({items,customers}:Prop){
            </Box>  
            <input hidden value={JSON.stringify(valueArray)} name="items" readOnly></input>
             <input hidden value={JSON.stringify(customer)} name="customerId" readOnly></input>
-            <Box sx={{overflowY: "auto",maxHeight: "300px",'&::-webkit-scrollbar': { width: '3px',height: '5px',},'&::-webkit-scrollbar-track': {backgroundColor: '#f1f1f1',borderRadius: '4px',},'&::-webkit-scrollbar-thumb': { backgroundColor: '#888',
+            <Box sx={{overflowY: "auto",maxHeight: "280px",'&::-webkit-scrollbar': { width: '3px',height: '5px',},'&::-webkit-scrollbar-track': {backgroundColor: '#f1f1f1',borderRadius: '4px',},'&::-webkit-scrollbar-thumb': { backgroundColor: '#888',
       borderRadius: '4px',
     },
     // 4. Target the thumb on hover
@@ -176,8 +176,8 @@ export default function VendorAddFieldSale({items,customers}:Prop){
               })}
               </Box>
             </Box>
-            <Box>Total Price  =  {totalPrice}</Box>
-            <Button sx={{mt:2}} variant="contained" type="submit" >test</Button>
+            <Box sx={{mt: 1, fontWeight: 'bold'}}>Total Price  =  {totalPrice}</Box>
+            <Button sx={{mt:1}} variant="contained" type="submit" >test</Button>
         </Box>
         </Box>
     )
