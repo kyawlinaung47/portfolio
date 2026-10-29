@@ -35,16 +35,16 @@ export default async  function HomeComponent() {
           </Box>
           <Box sx={{display: 'flex',flexWrap: 'wrap',mt: 5,flexDirection: "row",alignItems: 'center',justifyContent: 'center'}}>
                   
-                    <Box sx={{display: 'flex',height: '550PX',minWidth: "350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
-                      <Box sx={{width: "100%",display: "flex",alignItems: "center",justifyContent: "center"}}>
+                    <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
+                      <Box sx={{width: "100%",height: "auto",display: "flex",alignItems: "center",justifyContent: "center"}}>
                         <h1>Languages</h1>
                       </Box>
-                      <Box>
-                        <Box sx={{ml:"20px"}}>
+                      <Box sx={{width: "100%",height: "auto",wordWrap: "break-word",display: "flex",alignItems: "center",justifyContent: "center"}}>
+                        <Box sx={{width: "100%", ml: "20px",borderRadius: "10px",padding: 1}}>
                         <h3>HTML</h3>
                         <h3 style={{marginTop: "10px"}}>CSS</h3>
                         <h3 style={{marginTop: "10px"}}>JavaScript</h3>
-                        <p>Syntax,Operators,ifconditions,loops,Arrays,Objects</p>
+                        <p>Syntax,Operators,ifconditions,loops,Arrays, Objects</p>
                         <p>DOM Manipulation,Event Handling,</p>
                         <p>Functions,ES6 Features,Promises,Async/Await</p>
                         <p>JSON,Fetch API,Local Storage,Session Storage</p>
@@ -55,7 +55,7 @@ export default async  function HomeComponent() {
                       </Box>
                     </Box>
       
-                    <Box sx={{display: 'flex',height: '550PX',minWidth: "350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
+                    <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                       <Box sx={{width: "100%",display: "flex",alignItems: "center",justifyContent: "center"}}>
                         <h1>Frameworks</h1>
                       </Box>
@@ -76,7 +76,7 @@ export default async  function HomeComponent() {
                         </Box>
                       </Box>
                     </Box>
-                    <Box sx={{display: 'flex',height: '550PX',minWidth: "350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
+                    <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                       <Box sx={{width: "100%",display: "flex",alignItems: "center",justifyContent: "center"}} >
                         <h1>Others</h1>
                       </Box>
@@ -100,7 +100,7 @@ export default async  function HomeComponent() {
               <Box ><h1 style={{marginTop: 85,color: "white",scrollMarginTop: '90px'}} id="targetThree-div">Projects</h1></Box>
                   
                   
-              <Box sx={{display: 'flex',minWidth:"350px",maxWidth: "350px",height: '350PX',flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", mt: 2}}>
+              <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                       <Box>
                         <h2 style={{marginTop: 10}}>Logestic Mini Web Software</h2>
                       </Box>
@@ -116,13 +116,13 @@ export default async  function HomeComponent() {
                     
                </Box>
               
-              <Box sx={{display: 'flex',height: '550PX',minWidth:"350px",maxWidth: "400px",flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow", justifyContent: 'space-around', mt: 2}}>
+              <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                 <CommentComponent/>
               </Box>
               <Box sx={{fontSize: "20px",mt: 5}}>You can contact me at any time!</Box>
-      <div id="targetTwo-div" style={{scrollMarginTop: '75px'}}  >
-              <h2 style={{marginBottom: 50}}>Kyawlynnaung1995@gmail.com</h2>
-      </div>
+      <Box id="targetTwo-div" style={{scrollMarginTop: '75px'}} >
+              <Typography style={{marginBottom: 50}} sx={{fontSize: {lg: "20px",md: "20px",sm: "16px",xs: "16px"},fontStyle: "bold",mt: 2}}  >Kyawlynnaung1995@gmail.com</Typography>
+      </Box>
 
       
       {/* <Box ref={contactRef} sx={{ height: '200px', width: '100%', display: 'flex', alignItems: 'center', bgcolor: '#ffffff' }}>

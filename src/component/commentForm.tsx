@@ -23,7 +23,7 @@ const response = await handleComment(FormData);
     return(
         <Box sx={{bottom: 0}} component="form" action={handleCommentClient}>
                 <TextField sx={{margin: 1,width: 280}} name="email" type="email" label="Email" />
-                <TextField sx={{margin: 1,width: 300}} name="comment" type="text" label="Comment" variant="outlined" fullWidth multiline rows={1} />
+                <TextField sx={{margin: 1,width: 280}} name="comment" type="text" label="Comment" variant="outlined" fullWidth multiline rows={1} />
                 <Button sx={{margin:1}} type="submit" variant="contained" color="primary">Submit</Button>
             </Box>
     )
