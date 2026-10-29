@@ -100,7 +100,7 @@ export default async  function HomeComponent() {
               <Box ><h1 style={{marginTop: 85,color: "white",scrollMarginTop: '90px'}} id="targetThree-div">Projects</h1></Box>
                   
                   
-              <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
+              <Box sx={{display: 'flex',height: {lg: '350px',md: "350px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                       <Box>
                         <h2 style={{marginTop: 10}}>Logestic Mini Web Software</h2>
                       </Box>
