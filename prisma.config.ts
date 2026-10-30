@@ -12,3 +12,4 @@ export default defineConfig({
     url: process.env["PRISMA_DATABASE_URL"] ,
   },
 });
+
