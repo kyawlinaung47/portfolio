@@ -36,18 +36,18 @@ export default  function LogesticTopbar() {
         
      return (
         <Box sx={{display: "flex",flexDirection: "row",alignItems: "center", justifyContent: "space-between",bgcolor: "#143a52"}}>
-            <Box sx={{ml: 3,p: "10px 30px 10px 30px",borderRadius: 2 }}><Link sx={{color: 'white',fontSize: "30px"}} href="/">Home</Link></Box>
+            <Box sx={{ml: {lg: 3,md:3,sm:1,xs:1},p: "5px 15px 5px 15px",borderRadius: 2 }}><Link sx={{color: 'white',fontSize: "30px",textDecoration: "none"}} href="/">Home</Link></Box>
             <Box sx={{display: "flex",flexDirection: "row",alignItems:"center",justifyContent: "center"}}>
                 {topBarItems.map((item,index)=>{
                     return (
-                        <Link sx={{m: 1}} key={index} href={item.href}>
+                        <Link sx={{m: 1,textDecoration: "none",}} key={index} href={item.href}>
                             <ListItem
                                 disablePadding
                             sx={{
                                 backgroundColor: pathName.includes(item.pathName)
                                 ? "#457B9D"
                                 : null,
-                                ":hover": { backgroundColor: "#457B9D" },
+                                
                             }}
             >
                             <ListItemButton>
