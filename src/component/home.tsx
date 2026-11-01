@@ -99,7 +99,7 @@ export default async  function HomeComponent() {
               </Box>
               <Box ><h1 style={{marginTop: 85,color: "white",scrollMarginTop: '90px'}} id="targetThree-div">Projects</h1></Box>
                   
-                  
+               <Box sx={{display: "flex",flexWrap: 'wrap',mt: 5,flexDirection: "row",alignItems: 'center',justifyContent: 'center'}}> 
               <Box sx={{display: 'flex',height: {lg: '350px',md: "350px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                       <Box>
                         <h2 style={{marginTop: 30}}>Logestic Mini Web Software</h2>
@@ -115,6 +115,22 @@ export default async  function HomeComponent() {
                       </Box>
                     
                </Box>
+
+               <Box sx={{display: 'flex',height: {lg: '350px',md: "350px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
+                      <Box>
+                        <h2 style={{marginTop: 30}}>Food Menu and Ordering Software</h2>
+                      </Box>
+                      
+                      <Box>
+                          <h4 style={{marginTop: 3,lineHeight: 2}}>This is my learning project for creating a food menu and ordering application.</h4>
+                      </Box>
+
+                      <Box sx={{display: "flex",flexDirection: "row",alignItems: "center",justifyContent: "space-around",m: 2}}>
+                        <h3 style={{margin: 0}} ><a style={{color: 'black', textDecoration: 'underline'}} href="https://github.com/msquarefdc/foodie-pos-batch4">View Code</a></h3>
+                      </Box>
+                    
+               </Box>
+               </Box>  
               
               <Box sx={{display: 'flex',height: {lg: '550px',md: "550px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                 <CommentComponent/>
