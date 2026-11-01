@@ -102,7 +102,7 @@ export default async  function HomeComponent() {
                   
               <Box sx={{display: 'flex',height: {lg: '350px',md: "350px",sm: "auto",xs: "auto"},minWidth: {lg: "350px",md: "350px",sm: "350px",xs: "300px"},maxWidth: {lg: "400px",md: "400px",sm: "400px",xs: "300px"},flexDirection: 'column', flexWrap: 'wrap',color: 'white',bgcolor: '#07c0a7',margin: '20px',padding: 2,borderRadius: '10px',border: "ThreeDShadow",  }}>
                       <Box>
-                        <h2 style={{marginTop: 10}}>Logestic Mini Web Software</h2>
+                        <h2 style={{marginTop: 30}}>Logestic Mini Web Software</h2>
                       </Box>
                       
                       <Box>
