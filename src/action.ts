@@ -15,7 +15,8 @@ const commentData = z.object({
 const items = z.object({
         itemName: z.string().min(1,"Name is required"),
         itemQuantity: number().int().min(0,"Item quantity is required"),
-        price: z.number("Price must be number").int().positive("Price must be positive")
+        price: z.number("Price must be number").int().positive("Price must be positive"),
+        image: z.string().url("Image must be a valid URL"),
 })
 
 const customers = z.object({
@@ -152,13 +153,14 @@ export async function handleSelected(formData :FormData) {
 
 export async function handleEditItem(formData :FormData) {
         try{
-                const {itemName,itemQuantity,price} = items.parse({
+                const {itemName,itemQuantity,price,image} = items.parse({
                          itemName : formData.get("name") as string,
                          itemQuantity : Number(formData.get("quantity")),
                          price : Number(formData.get("price")),
+                         image : formData.get("image") as string
         })
         const id =formData.get('id');
-        await prisma.items.update({where:{id:Number(id)},data: {name: itemName,quantity: Number(itemQuantity),price: Number(price)}})
+        await prisma.items.update({where:{id:Number(id)},data: {name: itemName,quantity: Number(itemQuantity),price: Number(price),image: image}})
         revalidatePath("/logesticSoftware/office")
         }catch (error) {
                 if(error instanceof ZodError){

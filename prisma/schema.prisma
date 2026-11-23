@@ -16,6 +16,7 @@ model Items {
   id Int @id @default(autoincrement())
   name String
   quantity Int
+  image String?
   price Int
   addQuantity Int? @default(0)
   selected Boolean @default(false)
