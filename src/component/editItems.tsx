@@ -28,7 +28,7 @@ export default  function EditItems({ trueEditItem }: Props) {
                 //     access: "public",
                 //     handleUploadUrl: "/api/upload"
                 // });
-                const { url } = await put('articles/blob.txt', 'Hello World!', { access: 'private' });
+                const { url } = await put(file.name, file, { access: 'public',token: process.env.BLOB_READ_WRITE_TOKEN as string });
                 console.log("url", url);
                 formData.set("image", url);
             } else if (trueEditItem?.image) {
