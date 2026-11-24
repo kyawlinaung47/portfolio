@@ -20,16 +20,15 @@ export default  function EditItems({ trueEditItem }: Props) {
             const form = e.currentTarget;
             const formData = new FormData(form);
             const file = formData.get("image") as File;
-            console.log("file", file);
 
 
             if (file.size > 0) {
-                const { url } = await upload(file.name, file, {
+                const blob = await upload(file.name, file, {
                     access: "public",
                     handleUploadUrl: "/api/upload"
                 });
                 
-                console.log("url.........");
+                const url = blob.url
                 formData.set("image", url);
             } else if (trueEditItem?.image) {
                 formData.set("image", trueEditItem.image);
