@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 import { upload } from "@vercel/blob/client";
 import { Box, Button, TextField } from "@mui/material";
 import Image from "next/image";
+import { put } from "@vercel/blob";
+
 
 interface Props{
     trueEditItem: Items | null}
@@ -22,10 +24,11 @@ export default  function EditItems({ trueEditItem }: Props) {
 
 
             if (file && file.size > 0) {
-                const { url } = await upload(file.name, file, {
-                    access: "public",
-                    handleUploadUrl: "/api/upload"
-                });
+                // const { url } = await upload(file.name, file, {
+                //     access: "public",
+                //     handleUploadUrl: "/api/upload"
+                // });
+                const { url } = await put('articles/blob.txt', 'Hello World!', { access: 'private' });
                 console.log("url", url);
                 formData.set("image", url);
             } else if (trueEditItem?.image) {
