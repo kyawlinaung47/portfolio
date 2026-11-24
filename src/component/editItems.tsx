@@ -23,12 +23,12 @@ export default  function EditItems({ trueEditItem }: Props) {
             console.log("file", file);
 
 
-            if (file && file.size > 0) {
-                // const { url } = await upload(file.name, file, {
-                //     access: "public",
-                //     handleUploadUrl: "/api/upload"
-                // });
-                const { url } = await put(file.name, file, { access: 'public',token: process.env.BLOB_READ_WRITE_TOKEN as string });
+            if (file.size > 0) {
+                const { url } = await upload(file.name, file, {
+                    access: "public",
+                    handleUploadUrl: "/api/upload"
+                });
+                
                 console.log("url", url);
                 formData.set("image", url);
             } else if (trueEditItem?.image) {
