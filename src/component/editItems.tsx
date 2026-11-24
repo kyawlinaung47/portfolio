@@ -18,12 +18,15 @@ export default  function EditItems({ trueEditItem }: Props) {
             const form = e.currentTarget;
             const formData = new FormData(form);
             const file = formData.get("image") as File;
+            console.log("file", file);
+
 
             if (file && file.size > 0) {
                 const { url } = await upload(file.name, file, {
                     access: "public",
                     handleUploadUrl: "/api/upload"
                 });
+                console.log("url", url);
                 formData.set("image", url);
             } else if (trueEditItem?.image) {
                 formData.set("image", trueEditItem.image);
@@ -42,7 +45,7 @@ export default  function EditItems({ trueEditItem }: Props) {
 
     return(
         <Box sx={{display:"flex" ,flexDirection:"column",justifyContent:"center",alignItems:"center",mt: 3}} component="form" onSubmit={submitHandleEditItem}>
-            <Image loading="eager" style={{borderRadius: 5}} src={trueEditItem?.image || "/blue-skies-drink-735x1103.jpg"} alt={"Item Image"} width={100} height={100}></Image>
+            <Image loading="eager" style={{borderRadius: 5}}  src={trueEditItem?.image || "/blue-skies-drink-735x1103.jpg"} alt={"Item Image"} width={100} height={100}></Image>
             <TextField sx={{mt:1}} name="name" label="Name" defaultValue={trueEditItem?.name}></TextField>
             <TextField sx={{mt:1}} name="price" label="Price" defaultValue={trueEditItem?.price}></TextField>
             <TextField sx={{mt:1}} name="quantity" label="Quantity" defaultValue={trueEditItem?.quantity}></TextField>
